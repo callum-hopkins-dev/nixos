@@ -70,10 +70,6 @@ case "$cmd" in
       error "nx setup: missing required --host"
     }
 
-    if [ -e "$flake" ] && [ "$(find "$flake" -mindepth 1 -maxdepth 1 | wc -l)" -gt 0 ]; then
-      error "nx setup: $flake already exists and is not empty"
-    fi
-
     tmp="$(mktemp -d)"
     trap 'rm -rf "$tmp"' EXIT
 
@@ -83,13 +79,15 @@ case "$cmd" in
       git -C "$tmp" checkout "$commit"
     fi
 
+    sudo rmdir "$flake" 2>/dev/null || {
+      error "nx setup: $flake already exists and is not empty"
+    }
+    
     sudo mkdir -p "$flake"
     sudo rmdir "$flake"
 
     sudo cp -a "$tmp" "$flake"
-
-    sudo chown -R root:root "$flake"
-    sudo chmod -R a+rwX "$flake"
+    sudo chown -R "$(id -u):$(id -g)" "$flake"
 
     sudo nixos-rebuild switch --flake "$flake#$host"
     ;;
@@ -116,7 +114,7 @@ case "$cmd" in
 
     git -C "$flake" diff -- '*.nix' | delta
 
-    sudo nixos-rebuild switch --flake $flake#$host
+    sudo nixos-rebuild switch --flake "$flake#$host"
 
     git -C "$flake" add -A
 
@@ -162,11 +160,11 @@ case "$cmd" in
     ;;
 
   shell)
-    nix-shell -p $@ --command "$SHELL"
+    nix-shell -p "$@" --command "$SHELL"
     ;;
 
   dev)
-    nix develop $@ --command "$SHELL"
+    nix develop "$@" --command "$SHELL"
     ;;
 
   check)
