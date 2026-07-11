@@ -5,5 +5,5 @@
     inputs.bambu-studio.homeModules.default
   ];
 
-  # programs.bambu-studio.enable = true;
+  programs.bambu-studio.enable = true;
 }
