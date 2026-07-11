@@ -14,7 +14,7 @@ error() {
   exit 1
 }
 
-export NIX_CONFIG="experimental-features=nix-command flakes" 
+export NIX_CONFIG="experimental-features = nix-command flakes" 
 export NIXPKGS_ALLOW_UNFREE=1
 
 flake="/etc/nixos"
@@ -79,7 +79,7 @@ case "$cmd" in
       git -C "$tmp" checkout "$commit"
     fi
 
-    sudo rmdir "$flake" 2>/dev/null || {
+    [ ! -d "$flake" ] || sudo rmdir "$flake" 2>/dev/null || {
       error "nx setup: $flake already exists and is not empty"
     }
     
@@ -113,10 +113,9 @@ case "$cmd" in
     done
 
     git -C "$flake" diff -- '*.nix' | delta
+    git -C "$flake" add -A
 
     sudo nixos-rebuild switch --flake "$flake#$host"
-
-    git -C "$flake" add -A
 
     git -C "$flake" diff --cached --quiet || {
       git -C "$flake" commit -m "nixos: switch"
@@ -144,9 +143,12 @@ case "$cmd" in
     done
 
     if [ "$no_pull" -eq 0 ]; then
+      git -C "$flake" stash push
       git -C "$flake" pull --ff-only
+      git -C "$flake" stash pop
     fi
 
+    git -C "$flake" add flake.nix
     nix flake update --flake "$flake"
 
     git -C "$flake" diff --quiet HEAD -- flake.lock || {
