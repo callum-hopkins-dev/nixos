@@ -21,22 +21,16 @@
     };
 
     initContent = ''
-      dev() {
-        nix develop $@ --command ${pkgs.zsh}/bin/zsh
-      }
-
-      shell() {
-        nix-shell -p $@ --command ${pkgs.zsh}/bin/zsh
-      }
-
-      nixos-build() {
-        sudo nixos-rebuild switch --flake ~/nixos-config#$(hostname)
-      }
-
-      nixos-update() {
-        nix flake update --flake ~/nixos-config
-        nixos-build
-      }
+      typeset -a _completion_colors
+      _completion_colors=("''${(@s.:.)LS_COLORS}")
+      _completion_colors=("''${(@)_completion_colors:#ow=*}")
+      _completion_colors=("''${(@)_completion_colors:#tw=*}")
+      _completion_colors+=(
+        'ow=01;34'
+        'tw=01;34'
+      )
+      zstyle ':completion:*' list-colors "''${_completion_colors[@]}"
+      unset _completion_colors
     '';
 
     oh-my-zsh = {
