@@ -87,7 +87,9 @@ case "$cmd" in
     sudo rmdir "$flake"
 
     sudo cp -a "$tmp" "$flake"
-    sudo chown -R "$(id -u):$(id -g)" "$flake"
+
+    sudo chown -R "root:root" "$flake"
+    sudo chmod -R a+rwX "$flake"
 
     sudo nixos-rebuild switch --flake "$flake#$host"
     ;;
