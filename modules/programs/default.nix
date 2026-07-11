@@ -3,6 +3,6 @@
 {
   imports = [
     ./nx
+    ./git.nix
   ];
-
 }
