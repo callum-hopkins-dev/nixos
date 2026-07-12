@@ -27,8 +27,6 @@
 
         polkit_agent = true;
 
-        # avatar_path = config.home.file.".face".source;
-
         middle_click_opens_widget_settings = false;
         niri_overview_type_to_launch_enabled = true;
         screen_time_enabled = true;
@@ -106,11 +104,6 @@
         ];
       };
 
-      # theme = {
-      #   source = "wallpaper";
-      #   wallpaper_scheme = "m3-tonal-spot";
-      # };
-
       wallpaper = {
         enabled = true;
         directory = "${config.xdg.dataHome}/wallpapers";
@@ -118,7 +111,7 @@
         transition_on_startup = true;
         transition = [ "fade" ];
 
-        default.path = config.xdg.dataFile."wallpapers/default.jpg".source;
+        default.path = "${config.xdg.dataHome}/wallpapers/default.jpg";
       };
 
       idle = {
