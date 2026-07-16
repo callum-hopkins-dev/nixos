@@ -26,35 +26,51 @@
       };
     };
 
-    languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-      }
+    languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+        }
 
-      {
-        name = "toml";
-        auto-format = true;
-      }
+        {
+          name = "toml";
+          auto-format = true;
+        }
 
-      {
-        name = "html";
+        {
+          name = "html";
 
-        language-servers = [
-          "vscode-html-language-server"
-          "tailwindcss-ls"
-        ];
-      }
+          language-servers = [
+            "vscode-html-language-server"
+            "tailwindcss-ls"
+          ];
+        }
 
-      {
-        name = "css";
+        {
+          name = "css";
 
-        language-servers = [
-          "vscode-css-language-server"
-          "tailwindcss-ls"
-        ];
-      }
-    ];
+          language-servers = [
+            "vscode-css-language-server"
+            "tailwindcss-ls"
+          ];
+        }
+
+        {
+          name = "rust";
+
+          language-servers = [
+            "rust-analyzer"
+            "tailwindcss-ls"
+          ];
+        }
+      ];
+
+      language-server.tailwindcss-ls.config.tailwindCSS.includeLanguages = {
+        rust = "html";
+        "*.rs" = "html";
+      };
+    };
 
     defaultEditor = true;
   };
