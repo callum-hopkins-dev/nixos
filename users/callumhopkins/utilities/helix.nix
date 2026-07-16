@@ -41,6 +41,13 @@
         {
           name = "html";
 
+          formatter = {
+            command = "prettierd";
+            args = [ ".html" ];
+          };
+
+          auto-format = true;
+
           language-servers = [
             "vscode-html-language-server"
             "tailwindcss-ls"
@@ -49,6 +56,13 @@
 
         {
           name = "css";
+
+          formatter = {
+            command = "prettierd";
+            args = [ ".css" ];
+          };
+
+          auto-format = true;
 
           language-servers = [
             "vscode-css-language-server"
@@ -83,6 +97,7 @@
     pkgs.nixfmt
     pkgs.taplo
     pkgs.nixd
+    pkgs.prettierd
     pkgs.typescript-language-server
     pkgs.vscode-langservers-extracted
   ];
