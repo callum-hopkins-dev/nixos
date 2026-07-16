@@ -83,9 +83,13 @@
       language-server = {
         vscode-css-language-server.config.css.validate = false;
 
-        tailwindcss-ls.config.tailwindCSS.includeLanguages = {
-          rust = "html";
-          "*.rs" = "html";
+        tailwindcss-ls.config.tailwindCSS = {
+          includeLanguages = {
+            rust = "html";
+            "*.rs" = "html";
+          };
+
+          experimental.classRegex = ''class=\"[^\"]*\"'';
         };
       };
     };
