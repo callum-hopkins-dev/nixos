@@ -67,7 +67,7 @@
       ];
 
       language-server = {
-        vscode-css-language-server.css.validate = false;
+        vscode-css-language-server.config.css.validate = false;
 
         tailwindcss-ls.config.tailwindCSS.includeLanguages = {
           rust = "html";
