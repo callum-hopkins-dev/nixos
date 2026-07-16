@@ -51,8 +51,8 @@
           name = "css";
 
           language-servers = [
-            "tailwindcss-ls"
             "vscode-css-language-server"
+            "tailwindcss-ls"
           ];
         }
 
@@ -66,9 +66,13 @@
         }
       ];
 
-      language-server.tailwindcss-ls.config.tailwindCSS.includeLanguages = {
-        rust = "html";
-        "*.rs" = "html";
+      language-server = {
+        vscode-css-language-server.css.validate = false;
+
+        tailwindcss-ls.config.tailwindCSS.includeLanguages = {
+          rust = "html";
+          "*.rs" = "html";
+        };
       };
     };
 
