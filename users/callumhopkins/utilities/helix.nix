@@ -51,7 +51,7 @@
           name = "css";
 
           language-servers = [
-            "vscode-css-language-server"
+            # "vscode-css-language-server"
             "tailwindcss-ls"
           ];
         }
