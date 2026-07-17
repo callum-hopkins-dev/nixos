@@ -13,8 +13,6 @@
       Type = "simple";
       Environment = "DISPLAY=:0";
       ExecStart = "${pkgs.signal-desktop}/bin/signal-desktop --start-in-tray";
-      Restart = "on-failure";
-      RestartSec = 5;
     };
 
     Install = {

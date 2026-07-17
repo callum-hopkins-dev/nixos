@@ -1,7 +1,6 @@
 {
   inputs,
   config,
-  pkgs,
   ...
 }:
 
@@ -220,6 +219,7 @@
         widget_order = [
           "login_box"
           "clock"
+          "date"
           "weather"
 
           "sysmon_cpu_usage"
@@ -266,6 +266,24 @@
               center_text = true;
               clock_style = "digital";
               format = "{:%H:%M:%S}";
+              shadow = false;
+            };
+          };
+
+          date = {
+            box_height = 32.0;
+            box_width = 512.0;
+            cx = 960.0;
+            cy = 540.0;
+            output = "DP-1";
+            rotation = 0.0;
+            type = "clock";
+
+            settings = {
+              background = false;
+              center_text = true;
+              clock_style = "digital";
+              format = "%A, %B %d";
               shadow = false;
             };
           };
