@@ -16,5 +16,6 @@
     ./rpi-imager.nix
     ./darktable.nix
     ./simple-scan.nix
+    ./loupe.nix
   ];
 }
