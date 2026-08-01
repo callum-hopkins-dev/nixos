@@ -243,10 +243,14 @@
             type = "login_box";
 
             settings = {
+              layout = "compact";
               background_opacity = 0.0;
               input_opacity = 1.0;
               input_radius = 6.0;
-              show_login_button = true;
+              show_caps_lock = true;
+              show_keyboard_layout = true;
+              show_login_button = false;
+              show_unlock_hint = false;
             };
           };
 
