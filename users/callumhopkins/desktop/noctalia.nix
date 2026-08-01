@@ -26,7 +26,6 @@
 
         polkit_agent = true;
 
-        middle_click_opens_widget_settings = false;
         niri_overview_type_to_launch_enabled = true;
         screen_time_enabled = true;
 
@@ -50,10 +49,7 @@
           privilege_command = "pkexec";
         };
 
-        launcher = {
-          categories = false;
-          session_search = true;
-        };
+        launcher.categories = false;
 
         session.actions = [
           {
@@ -160,10 +156,12 @@
           { type = "system"; }
           { type = "audio"; }
         ];
+
+        calendar.show_week_numbers = true;
       };
 
       lockscreen.blur_intensity = 0.85;
-      nightLight.enabled = true;
+      nightlight.enabled = true;
 
       notification.background_opacity = config.stylix.opacity.popups;
 
@@ -202,14 +200,14 @@
         radius_top_right = 0;
       };
 
-      calender.enabled = true;
+      calendar.enabled = true;
 
       widget = {
         bluetooth.hide_when_no_connected_device = true;
         clock.format = "{:%H:%M:%S}";
         network.show_label = false;
         volume.show_label = false;
-        workspaces.display = "none";
+        workspaces.show_labels = false;
       };
 
       lockscreen_widgets = {
