@@ -17,5 +17,6 @@
     ./darktable.nix
     ./simple-scan.nix
     ./loupe.nix
+    ./gapless.nix
   ];
 }
