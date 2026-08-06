@@ -9,7 +9,6 @@
     ./wget.nix
     ./jq.nix
     ./bottom.nix
-    ./kew.nix
     ./bat.nix
   ];
 }
