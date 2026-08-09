@@ -42,6 +42,10 @@
       ./assets/wallpapers/default.jpg
     ];
 
+    sessionPath = [
+      "/home/callumhopkins/.cargo/bin/"
+    ];
+
     stateVersion = "26.05";
   };
 }
