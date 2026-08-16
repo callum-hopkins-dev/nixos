@@ -306,11 +306,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1786879041,
-        "narHash": "sha256-yFxhzo3cjYoMbtW5/yAZUljBi+yhDRE6BdFEj+iHYC0=",
+        "lastModified": 1786879246,
+        "narHash": "sha256-M94AWV1WEGAb8sT4l/xZgy1FgsHRotibS698n99Wv5M=",
         "owner": "callum-hopkins-dev",
         "repo": "nx",
-        "rev": "5ab90ad2d5400a5d709afcd5430db974ec1a0cd6",
+        "rev": "ec8f4678f87b7c4e7c699016ba43975b49b08ac3",
         "type": "github"
       },
       "original": {
