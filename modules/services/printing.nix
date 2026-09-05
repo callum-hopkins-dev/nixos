@@ -7,7 +7,9 @@
 
       drivers = with pkgs; [
         gutenprint
-        hplip
+        (pkgs.hplip.override {
+          withQt5 = false;
+        })
       ];
     };
 
