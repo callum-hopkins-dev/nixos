@@ -24,9 +24,10 @@
 
         extraPackages = [
           pkgs.intel-media-driver
-          pkgs.intel-vaapi-driver
           pkgs.vpl-gpu-rt
+
           pkgs.intel-compute-runtime
+          (lib.getOutput "drivers" pkgs.intel-compute-runtime)
         ];
       };
 
