@@ -43,6 +43,10 @@
         type = "rxtsel/portctl:indicator";
       };
 
+      privacy = {
+        hide_inactive = true;
+      };
+
       spacer_2 = {
         length = 32;
         type = "spacer";
