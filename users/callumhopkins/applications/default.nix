@@ -18,6 +18,5 @@
     ./simple-scan.nix
     ./loupe.nix
     ./gapless.nix
-    ./claude-code.nix
   ];
 }
