@@ -238,7 +238,7 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 640.0;
-            output = "DP-1";
+            # output = "DP-1";
             rotation = 0.0;
             type = "login_box";
 
@@ -259,7 +259,7 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 448.0;
-            output = "DP-1";
+            # output = "DP-1";
             rotation = 0.0;
             type = "clock";
 
@@ -277,7 +277,7 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 540.0;
-            output = "DP-1";
+            # output = "DP-1";
             rotation = 0.0;
             type = "clock";
 
@@ -295,7 +295,7 @@
             box_width = 288.0;
             cx = 176.0;
             cy = 80.0;
-            output = "DP-1";
+            # output = "DP-1";
             rotation = 0.0;
             type = "weather";
 
