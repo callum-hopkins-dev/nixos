@@ -239,6 +239,8 @@
             cx = 960.0;
             cy = 640.0;
             output = "DP-3";
+            placement_width = 1920.0;
+            placement_height = 1080.0;
             rotation = 0.0;
             type = "login_box";
 
