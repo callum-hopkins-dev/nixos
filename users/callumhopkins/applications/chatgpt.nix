@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 
 let
-  chatgpt = pkgs.stdenv.mkDerivation {
+  chatgpt' = pkgs.stdenv.mkDerivation {
     pname = "chatgpt";
     version = "latest-2026-09-06";
 
@@ -73,5 +73,5 @@ let
   };
 in
 {
-  home.packages = [ chatgpt ];
+  home.packages = [ chatgpt' ];
 }
