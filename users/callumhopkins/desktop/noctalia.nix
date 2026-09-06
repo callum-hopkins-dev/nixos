@@ -238,23 +238,24 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 640.0;
+            output = "DP-3";
             rotation = 0.0;
             type = "login_box";
 
             settings = {
-              layout = "compact";
+              background_color = "surface_variant";
               background_opacity = 0.0;
+              background_radius = 12.0;
+              center_password_text = false;
               input_opacity = 1.0;
               input_radius = 6.0;
+              layout = "compact";
               show_caps_lock = true;
               show_keyboard_layout = true;
               show_login_button = false;
-              show_unlock_hint = false;
-              background_color = "surface_variant";
-              background_radius = 12.0;
-              center_password_text = false;
               show_media = true;
               show_session_buttons = true;
+              show_unlock_hint = false;
               show_weather = true;
             };
           };
