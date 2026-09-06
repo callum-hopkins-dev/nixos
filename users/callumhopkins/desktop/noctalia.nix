@@ -238,7 +238,6 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 640.0;
-            # output = "DP-1";
             rotation = 0.0;
             type = "login_box";
 
@@ -251,6 +250,12 @@
               show_keyboard_layout = true;
               show_login_button = false;
               show_unlock_hint = false;
+              background_color = "surface_variant";
+              background_radius = 12.0;
+              center_password_text = false;
+              show_media = true;
+              show_session_buttons = true;
+              show_weather = true;
             };
           };
 
@@ -259,7 +264,6 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 448.0;
-            # output = "DP-1";
             rotation = 0.0;
             type = "clock";
 
@@ -277,7 +281,6 @@
             box_width = 512.0;
             cx = 960.0;
             cy = 540.0;
-            # output = "DP-1";
             rotation = 0.0;
             type = "clock";
 
@@ -295,7 +298,6 @@
             box_width = 288.0;
             cx = 176.0;
             cy = 80.0;
-            # output = "DP-1";
             rotation = 0.0;
             type = "weather";
 
@@ -312,7 +314,6 @@
             box_width = 64.0;
             cx = 1760.0;
             cy = 48.0;
-            output = "DP-1";
             rotation = 0.0;
             type = "sysmon";
 
@@ -332,7 +333,6 @@
             box_width = 64.0;
             cx = 1792.0;
             cy = 48.0;
-            output = "DP-1";
             rotation = 0.0;
             type = "sysmon";
 
@@ -352,7 +352,6 @@
             box_width = 64.0;
             cx = 1824.0;
             cy = 48.0;
-            output = "DP-1";
             rotation = 0.0;
             type = "sysmon";
 
@@ -372,7 +371,6 @@
             box_width = 64.0;
             cx = 1856.0;
             cy = 48.0;
-            output = "DP-1";
             rotation = 0.0;
             type = "sysmon";
 
