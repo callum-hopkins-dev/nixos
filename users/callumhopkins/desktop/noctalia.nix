@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   config,
   ...
 }:
@@ -7,6 +8,11 @@
 {
   imports = [
     inputs.noctalia.homeModules.default
+  ];
+
+  home.packages = [
+    # alexander/game-launcher
+    pkgs.gcc
   ];
 
   programs.noctalia = {
@@ -208,6 +214,12 @@
         network.show_label = false;
         volume.show_label = false;
         workspaces.show_labels = false;
+      };
+
+      plugins = {
+        enabled = [
+          "alexander/game-launcher"
+        ];
       };
 
       lockscreen_widgets = {
