@@ -18,6 +18,6 @@
     ./simple-scan.nix
     ./loupe.nix
     ./gapless.nix
-    # ./chatgpt.nix
+    ./chatgpt.nix
   ];
 }
