@@ -63,6 +63,12 @@ let
       addAutoPatchelfSearchPath ${lib.getLib pkgs.qt6.qtbase}/lib
     '';
 
+    # autoPatchelf moves PT_INTERP beyond detect-libc's 2 KiB scan. Its
+    # process.report fallback trips Electron's CFI, so use the glibc watcher.
+    postPatch = ''
+      sed -i "s|const family = familySync();|const family = 'glibc'     ;|" usr/lib/chatgpt/resources/app.asar
+    '';
+
     meta = {
       description = "Bring ChatGPT to your desktop with ChatGPT Work and Codex, plus context from your email, screenshots, files, and anything on your screen.";
       homepage = "https://chatgpt.com/";
