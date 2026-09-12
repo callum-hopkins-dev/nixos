@@ -27,6 +27,8 @@
           pkgs.vpl-gpu-rt
 
           pkgs.intel-compute-runtime
+          pkgs.intel-graphics-compiler
+
           pkgs.level-zero
 
           (lib.getOutput "drivers" pkgs.intel-compute-runtime)
