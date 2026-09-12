@@ -10,6 +10,8 @@
       "wheel"
       "lp"
       "disk"
+      "render"
+      "video"
     ];
 
     shell = pkgs.zsh;
