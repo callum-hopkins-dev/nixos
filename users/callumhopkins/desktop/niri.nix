@@ -40,7 +40,6 @@
 
     hotkey-overlay { skip-at-startup; }
     prefer-no-csd
-    screenshot-path null
 
     window-rule {
         geometry-corner-radius 12
