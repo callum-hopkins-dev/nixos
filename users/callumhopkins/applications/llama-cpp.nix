@@ -6,6 +6,7 @@ let
   llama-cpp' = pkgs'.llama-cpp.overrideAttrs (old: {
     cmakeFlags = (old.cmakeFlags or [ ]) ++ [
       "-DGGML_CUDA_FORCE_MMQ=ON"
+      "-DGGML_CUDA_NCCL=ON"
       "-DGGML_CUDA_FA_QUANTS=all"
     ];
 
