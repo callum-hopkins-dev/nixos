@@ -1,4 +1,4 @@
-{ ... }:
+{ osConfig, ... }:
 
 {
   programs.noctalia.settings = {
@@ -32,7 +32,7 @@
           box_width = 512.0;
           cx = 960.0;
           cy = 640.0;
-          output = "DP-3";
+          output = osConfig.services.xserver.output.name;
           placement_width = 1920.0;
           placement_height = 1080.0;
           rotation = 0.0;
