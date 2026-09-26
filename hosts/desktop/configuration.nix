@@ -10,10 +10,10 @@
 
   networking.hostName = "desktop";
 
-  hardware.graphics.intel.enable = true;
+  hardware.graphics.nvidia.enable = true;
 
   services.xserver.output = {
-    name = "DP-3";
+    name = "HDMI-A-1";
 
     mode = {
       framerate = 74.973;
