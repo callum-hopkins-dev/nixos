@@ -19,5 +19,6 @@
     ./loupe.nix
     ./gapless.nix
     ./chatgpt.nix
+    ./llama-cpp.nix
   ];
 }
