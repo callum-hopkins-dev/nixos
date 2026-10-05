@@ -89,7 +89,10 @@
             "*.rs" = "html";
           };
 
-          experimental.classRegex = [ ''class=\"([^\"]*)\"'' ];
+          experimental.classRegex = [
+            ''class\s*=\s*\"([^\"]*)\"''
+            ''class\s*:\s*\"([^\"]*)\"''
+          ];
         };
       };
     };
