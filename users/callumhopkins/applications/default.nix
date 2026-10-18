@@ -20,7 +20,6 @@
     ./gapless.nix
     ./chatgpt.nix
     ./llama-cpp.nix
-    ./reaper.nix
     ./stable-diffusion-cpp.nix
   ];
 }
