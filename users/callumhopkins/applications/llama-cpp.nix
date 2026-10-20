@@ -8,6 +8,8 @@ let
       "-DGGML_CUDA_FORCE_MMQ=ON"
       "-DGGML_CUDA_NCCL=ON"
       "-DGGML_CUDA_FA_QUANTS=all"
+      "-DGGML_CPU=ON"
+      "-DGGML_NATIVE=ON"
     ];
 
     nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [
