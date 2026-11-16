@@ -13,7 +13,7 @@
   hardware.graphics.intel.enable = true;
 
   services.xserver.output = {
-    name = "HDMI-A-1";
+    name = "DP-3";
 
     mode = {
       framerate = 74.973;
