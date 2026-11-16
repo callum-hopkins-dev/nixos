@@ -10,7 +10,7 @@
 
   networking.hostName = "desktop";
 
-  hardware.graphics.nvidia.enable = true;
+  hardware.graphics.intel.enable = true;
 
   services.xserver.output = {
     name = "HDMI-A-1";
